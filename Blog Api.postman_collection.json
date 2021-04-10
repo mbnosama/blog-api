@@ -1,0 +1,662 @@
+{
+	"info": {
+		"_postman_id": "dc6804ca-2eab-43b8-8cf6-463a1bcc3f1e",
+		"name": "Blog Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}comments",
+							"host": [
+								"{{base_url}}comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"helloWorld\",\r\n    \"article\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}comment/store?comment=hello&article",
+							"host": [
+								"{{base_url}}comment"
+							],
+							"path": [
+								"store"
+							],
+							"query": [
+								{
+									"key": "comment",
+									"value": "hello"
+								},
+								{
+									"key": "article",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/{id}/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"helloWorld222\",\r\n    \"article\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}comment/2/update",
+							"host": [
+								"{{base_url}}comment"
+							],
+							"path": [
+								"2",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/{id}/remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"helloWorld\",\r\n    \"article\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}comment/1/remove",
+							"host": [
+								"{{base_url}}comment"
+							],
+							"path": [
+								"1",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comment/{id}/show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"helloWorld\",\r\n    \"article\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}comment/1/show",
+							"host": [
+								"{{base_url}}comment"
+							],
+							"path": [
+								"1",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Common Question",
+			"item": [
+				{
+					"name": "commonquestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}commonquestion",
+							"host": [
+								"{{base_url}}commonquestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "commonquestion/store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "How old are you ",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "10 ",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}commonquestion/store",
+							"host": [
+								"{{base_url}}commonquestion"
+							],
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "commonquestion/{id}/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "answer",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "question",
+									"value": "how old are you",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}commonquestion/2/update",
+							"host": [
+								"{{base_url}}commonquestion"
+							],
+							"path": [
+								"2",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "commonquestion/{id}/remove",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"helloWorld\",\r\n    \"article\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}commonquestion/2/remove",
+							"host": [
+								"{{base_url}}commonquestion"
+							],
+							"path": [
+								"2",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "commonquestion/{id}/show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "CixWbXIuUD3hBEOIEETHLSCfdhMiu6Vy3ijTJm8io6icubhG5Wwa4e5idxXSuHbKppwwIdXFPIRNFmWF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}commonquestion/1/show",
+							"host": [
+								"{{base_url}}commonquestion"
+							],
+							"path": [
+								"1",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "articles",
+			"item": [
+				{
+					"name": "get articles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}articles",
+							"host": [
+								"{{base_url}}articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get article by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}articles/2",
+							"host": [
+								"{{base_url}}articles"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}articles/search/mr",
+							"host": [
+								"{{base_url}}articles"
+							],
+							"path": [
+								"search",
+								"mr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "pScLrlM8bbgeOqA1GDE2xfGEEAwkO5PH7nibRkqT07QvtNekW1kjWPZs2MJhLUxIbkiWts1iUBO68L44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "title for image222",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "body an body for image333",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "author_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}article/write?title=new with aimage&body=body an body for image",
+							"host": [
+								"{{base_url}}article"
+							],
+							"path": [
+								"write"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "new with aimage"
+								},
+								{
+									"key": "body",
+									"value": "body an body for image"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "pScLrlM8bbgeOqA1GDE2xfGEEAwkO5PH7nibRkqT07QvtNekW1kjWPZs2MJhLUxIbkiWts1iUBO68L44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Tilte Two\",\r\n    \"body\":\"Body Two\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}article/update/11",
+							"host": [
+								"{{base_url}}article"
+							],
+							"path": [
+								"update",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "pScLrlM8bbgeOqA1GDE2xfGEEAwkO5PH7nibRkqT07QvtNekW1kjWPZs2MJhLUxIbkiWts1iUBO68L44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}article/delete/11",
+							"host": [
+								"{{base_url}}article"
+							],
+							"path": [
+								"delete",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get article Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}article/1/comments",
+							"host": [
+								"{{base_url}}article"
+							],
+							"path": [
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ali@mail.com\",\r\n    \"password\":1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}login",
+					"host": [
+						"{{base_url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ali\",\r\n    \"email\":\"ali@mail.com\",\r\n    \"password\":1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}register",
+					"host": [
+						"{{base_url}}register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "YGmXT44ykq4GK9vyRQK8V3m6IsNhVxdioUBcqBb2YGBvy13DVn93cHI2vqZlLtuA9LWZ9XeU6whi3XDM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}logout",
+					"host": [
+						"{{base_url}}logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
